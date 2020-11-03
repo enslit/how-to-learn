@@ -1,0 +1,114 @@
+.footer {
+  box-sizing: border-box;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  background-color: $color-dark;
+  padding: 60px 0 40px;
+
+  &__columns {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+  }
+
+  &__column {
+    &_content {
+      &_copyright {
+        display: flex;
+        flex-basis: 711px;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__column-heading {
+    color: white;
+    line-height: 30px;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+  }
+
+  &__column-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__author {
+    margin: 18px 0;
+    color: white;
+  }
+
+  &__link {
+    line-height: 30px;
+    font-size: 18px;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      transition: all .5s ease;
+      bottom: 0;
+      background: $color-main;
+    }
+
+    &:before {
+      width: calc(100% + 14px);
+      height: 1px;
+      opacity: 0;
+      left: -7px;
+      transform: translateX(-200%);
+    }
+
+    &:after {
+      width: 1px;
+      height: 100%;
+      right: -7px;
+      opacity: 0;
+      transform: translateY(200%);
+    }
+
+    > span {
+      display: block;
+      position: relative;
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        transition: all .5s ease;
+        left: -7px;
+        top: 0;
+        background: $color-main;
+      }
+
+      &:before {
+        width: calc(100% + 14px);
+        height: 1px;
+        opacity: 0;
+        transform: translateX(200%);
+      }
+
+      &:after {
+        width: 1px;
+        height: 100%;
+        opacity: 0;
+        transform: translateY(-200%);
+      }
+    }
+
+    &:hover:before, &:hover:after, &:hover > span:before, &:hover > span:after {
+      transform:  translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__social-icon {
+    margin-right: 10px;
+  }
+}

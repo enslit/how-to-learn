@@ -1,0 +1,41 @@
+.description {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.two-columns {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+
+  &__brief {
+    margin: 0;
+    width: 174px;
+    line-height: 1.2;
+    font-size: 18px;
+    font-weight: normal;
+    color: $color-main;
+  }
+
+  &__main-text {
+    width: 80%;
+    min-width: 784px;
+  }
+
+  &__paragraph {
+    margin: 0 0 20px 0;
+    line-height: 34px;
+    font-size: 24px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &__span-accent {
+    margin-right: 5px;
+    font-weight: bold;
+  }
+}
+
