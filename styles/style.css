@@ -6,6 +6,7 @@
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 18px;
   line-height: 1.2;
+  overflow-x: hidden;
 }
 
 /* Common blocks */
@@ -233,14 +234,20 @@
 }
 
 .feynman__title {
-  margin-bottom: 70px;
+  margin: 0 auto 70px;
+  text-align: center;
+  line-height: 1.15;
   width: 648px;
   font-size: 120px;
 }
 
 .feynman__subtitle {
+  margin: 0 auto;
+  text-align: center;
   line-height: 51px;
+  width: 60%;
   font-size: 36px;
+  font-weight: normal;
 }
 
 .feynman__link {
@@ -334,6 +341,9 @@
 }
 
 .footer__author {
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
   margin: 18px 0;
   color: white;
 }
@@ -344,10 +354,15 @@
   position: relative;
   color: white;
   text-decoration: none;
+  display: inline-block;
+}
+
+.footer__hover-line {
   display: inline-flex;
   align-items: center;
+  position: relative;
 }
-/* Надеюсь не перемудрил с эффектами для ссылок */
+
 .footer__link:before,
 .footer__link:after {
   content: "";
@@ -373,13 +388,8 @@
   transform: translateY(200%);
 }
 
-.footer__link > span {
-  display: block;
-  position: relative;
-}
-
-.footer__link > span:before,
-.footer__link > span:after {
+.footer__hover-line:before,
+.footer__hover-line:after {
   content: "";
   position: absolute;
   transition: all 0.5s ease;
@@ -388,14 +398,14 @@
   background: #2f80ed;
 }
 
-.footer__link > span:before {
+.footer__hover-line:before {
   width: calc(100% + 14px);
   height: 1px;
   opacity: 0;
   transform: translateX(200%);
 }
 
-.footer__link > span:after {
+.footer__hover-line:after {
   width: 1px;
   height: 100%;
   opacity: 0;
@@ -404,8 +414,8 @@
 
 .footer__link:hover:before,
 .footer__link:hover:after,
-.footer__link:hover > span:before,
-.footer__link:hover > span:after {
+.footer__link:hover > .footer__hover-line:before,
+.footer__link:hover > .footer__hover-line:after {
   transform: translate(0, 0);
   opacity: 1;
 }
