@@ -1,0 +1,7 @@
+.resources__logo {
+  transition: transform 300ms ease-in;
+}
+
+.resources__logo path{
+  transition: fill 300ms ease-in;
+}

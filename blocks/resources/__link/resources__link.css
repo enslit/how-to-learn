@@ -1,0 +1,11 @@
+.resources__link {
+  display: block;
+}
+
+.resources__link:hover .resources__logo {
+  transform: scale(1.1);
+}
+
+.resources__link:hover .resources__logo path {
+  fill: #2f80ed;
+}
