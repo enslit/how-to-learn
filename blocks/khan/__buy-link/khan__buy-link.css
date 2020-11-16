@@ -11,18 +11,6 @@
   overflow: hidden;
 }
 
-.khan__buy-link:before {
-  content: "";
-  position: absolute;
-  transition: transform 0.5s ease;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-  background: #2f80ed;
-  transform: translateX(-100%);
-}
-
-.khan__buy-link:hover:before {
-  transform: translateX(0);
+.khan__buy-link:hover {
+  opacity: .6;
 }
